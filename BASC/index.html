@@ -323,6 +323,38 @@
        document.getElementById(destino).classList.remove('collapse')
        document.getElementById(destino).classList.add('show')
       }
+      
+    //   async function carregarDados() {
+    //   try {
+    //     // Fazendo a requisição para carregar o arquivo JSON
+    //     const resposta = await axios.get('dados.json'); // Caminho para o arquivo JSON
+    //     const dadosPromocoes = resposta.data;
+
+    //     // Referência para o elemento da lista
+    //     const listaPromocoes = document.getElementById('principal');
+
+    //     // Limpando a lista antes de adicionar os novos itens
+    //     listaPromocoes.innerHTML = '';
+
+    //     // Exibindo os dados na tela
+    //     dadosPromocoes.forEach(promo => {
+    //       const li = document.createElement('li');
+    //       li.textContent = `${promo.nome}`;
+    //       listaPromocoes.appendChild(li);
+    //       li.addEventListener('click',()=>{
+    //        navega('perfil')
+    //        document.getElementById('perfil').innerHTML=`${promo.nome} - R$${promo.preco_promocional} (Desconto: ${promo.desconto_percentual}%)`;
+    //       });
+          
+    //     });
+
+    //   } catch (erro) {
+    //     console.error('Erro ao carregar os dados:', erro);
+    //   }
+    // }
+
+    // // Chama a função ao carregar a página
+    // window.onload = carregarDados;
     </script>
   </body>
 </html>

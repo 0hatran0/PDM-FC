@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "nome": "Luiz",
+      "foto": "",
+      "contato": "888",
+      "lote": {
+        "descricao": "Boa safra",
+        "foto":"",
+        "titulo": "",
+        "sobre": "",
+        "tempo": "",
+        "qtdProdutos": "2",
+        "produto": {
+            "alimento": "",
+            "quantidade": "",
+            "preco":""
+        }
+      }
+    },
+    {
+      "id": 2,
+      "nome": "Camisa Polo Masculina",
+      "categoria": "Roupas",
+      "preco_original": 89.90,
+      "preco_promocional": 59.90,
+      "desconto_percentual": 33,
+      "data_inicio": "2025-02-10",
+      "data_fim": "2025-02-20",
+      "disponibilidade": true
+    },
+    {
+      "id": 3,
+      "nome": "Smartphone 128GB",
+      "categoria": "Eletrônicos",
+      "preco_original": 1499.00,
+      "preco_promocional": 1299.00,
+      "desconto_percentual": 13,
+      "data_inicio": "2025-02-05",
+      "data_fim": "2025-02-15",
+      "disponibilidade": false
+    }
+   ]
