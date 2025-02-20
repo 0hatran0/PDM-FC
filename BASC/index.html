@@ -101,7 +101,7 @@
       </header>
 
       <!-- Navegação -->
-      <main id="principal" class="tela show">
+      <main class="tela show">
         <div class="d-flex flex-column border border-primary m-2 border-5">
           <!-- Intro -->
           <div class="my-3 border border-secondary m-2 border-4">
@@ -138,7 +138,7 @@
             </form>
           </div>
           <!-- Cards -->
-          <div class="d-flex flex-column border border-secondary m-2 border-4" style="font-size: small;">
+          <div id="publicacoes" class="d-flex flex-column border border-secondary m-2 border-4" style="font-size: small;">
             <!-- Card1 -->
             <div class="col border border-succes m-2 border-3">
               <div class="card border border-danger m-2 border-2">
@@ -323,38 +323,39 @@
        document.getElementById(destino).classList.remove('collapse')
        document.getElementById(destino).classList.add('show')
       }
-      
-    //   async function carregarDados() {
-    //   try {
-    //     // Fazendo a requisição para carregar o arquivo JSON
-    //     const resposta = await axios.get('dados.json'); // Caminho para o arquivo JSON
-    //     const dadosPromocoes = resposta.data;
 
-    //     // Referência para o elemento da lista
-    //     const listaPromocoes = document.getElementById('principal');
+      // Criar cards com js? 
+      async function carregarDados() {
+      try {
+        // Fazendo a requisição para carregar o arquivo JSON
+        const resposta = await axios.get('teste.json'); // Caminho para o arquivo JSON
+        const dadosPublicacoes = resposta.data;
 
-    //     // Limpando a lista antes de adicionar os novos itens
-    //     listaPromocoes.innerHTML = '';
+        // Referência para o elemento da lista
+        const cardsPublicaoes = document.getElementById('publicacoes');
 
-    //     // Exibindo os dados na tela
-    //     dadosPromocoes.forEach(promo => {
-    //       const li = document.createElement('li');
-    //       li.textContent = `${promo.nome}`;
-    //       listaPromocoes.appendChild(li);
-    //       li.addEventListener('click',()=>{
-    //        navega('perfil')
-    //        document.getElementById('perfil').innerHTML=`${promo.nome} - R$${promo.preco_promocional} (Desconto: ${promo.desconto_percentual}%)`;
-    //       });
+        // Limpando a lista antes de adicionar os novos itens
+        cardsPublicaoes.innerHTML = '';
+
+        // Exibindo os dados na tela
+        dadosPublicacoes.forEach(promo => {
+          const li = document.createElement('li');
+          li.textContent = `${promo.nome}`;
+          cardsPublicaoes.appendChild(li);
+          li.addEventListener('click',()=>{
+           navega('perfil')
+           document.getElementById('perfil').innerHTML=`${promo.nome} - R$${promo.preco_promocional} (Desconto: ${promo.desconto_percentual}%)`;
+          });
           
-    //     });
+        });
 
-    //   } catch (erro) {
-    //     console.error('Erro ao carregar os dados:', erro);
-    //   }
-    // }
+      } catch (erro) {
+        console.error('Erro ao carregar os dados:', erro);
+      }
+    }
 
-    // // Chama a função ao carregar a página
-    // window.onload = carregarDados;
+    // Chama a função ao carregar a página
+    window.onload = carregarDados;
     </script>
   </body>
 </html>

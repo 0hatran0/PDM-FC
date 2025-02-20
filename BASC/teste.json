@@ -1,0 +1,57 @@
+[
+ {
+   "id": 1,
+   "nome": "Tênis Esportivo",
+   "categoria": "Calçados",
+   "preco_original": 199.99,
+   "preco_promocional": 149.99,
+   "desconto_percentual": 25,
+   "data_inicio": "2025-02-01",
+   "data_fim": "2025-02-28",
+   "disponibilidade": true
+ },
+ {
+   "id": 2,
+   "nome": "Camisa Polo Masculina",
+   "categoria": "Roupas",
+   "preco_original": 89.90,
+   "preco_promocional": 59.90,
+   "desconto_percentual": 33,
+   "data_inicio": "2025-02-10",
+   "data_fim": "2025-02-20",
+   "disponibilidade": true
+ },
+ {
+   "id": 3,
+   "nome": "Smartphone 128GB",
+   "categoria": "Eletrônicos",
+   "preco_original": 1499.00,
+   "preco_promocional": 1299.00,
+   "desconto_percentual": 13,
+   "data_inicio": "2025-02-05",
+   "data_fim": "2025-02-15",
+   "disponibilidade": false
+ },
+ {
+   "id": 4,
+   "nome": "Fritadeira Elétrica",
+   "categoria": "Eletrodomésticos",
+   "preco_original": 499.99,
+   "preco_promocional": 399.99,
+   "desconto_percentual": 20,
+   "data_inicio": "2025-02-12",
+   "data_fim": "2025-02-18",
+   "disponibilidade": true
+ },
+ {
+   "id": 5,
+   "nome": "Notebook Gamer",
+   "categoria": "Informática",
+   "preco_original": 4999.00,
+   "preco_promocional": 4499.00,
+   "desconto_percentual": 10,
+   "data_inicio": "2025-02-01",
+   "data_fim": "2025-02-28",
+   "disponibilidade": true
+ }
+]
