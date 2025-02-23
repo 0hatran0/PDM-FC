@@ -22,25 +22,25 @@
     <!-- CSS -->
     <!-- Colocando bordas para se localizar -->
     <style>
-      header{
-        border: solid 5px rgb(0,0,0);
+      header {
+        border: solid 5px rgb(0, 0, 0);
       }
 
-      main{
-        border: solid 5px rgb(0,0,0);
+      main {
+        border: solid 5px rgb(0, 0, 0);
       }
 
-      footer{
-        border: solid 5px rgb(0,0,0);
+      footer {
+        border: solid 5px rgb(0, 0, 0);
       }
     </style>
   </head>
   <!-- Definindo o body -->
   <body d-flex flex-column min-vh-100 bg-light text-dark>
-
     <!-- Definindo div suprema -->
-    <div class="container flex-grow-1 d-flex flex-column border border-primary border-5">
-
+    <div
+      class="container flex-grow-1 d-flex flex-column border border-primary border-5"
+    >
       <!-- Cabeçalho -->
       <header>
         <!-- Navbar -->
@@ -49,10 +49,10 @@
             <!-- Icon -->
             <a class="navbar-brand border border-succes m-2 border-3" href="#">
               <img
-              class="img-fluid rounded-circle"
-              src="../IMAGENS/logo-3.png"
-              alt="Logo"
-              style="width: 60px; height: 60px"
+                class="img-fluid rounded-circle"
+                src="../IMAGENS/logo-3.png"
+                alt="Logo"
+                style="width: 60px; height: 60px"
               />
             </a>
             <!-- Botao menu -->
@@ -68,8 +68,21 @@
               <span class="navbar-toggler-icon"></span>
             </button>
             <!-- Menu -->
-            <div class="collapse navbar-collapse border border-succes m-2 border-3" id="navbarSupportedContent">
+            <div
+              class="collapse navbar-collapse border border-succes m-2 border-3"
+              id="navbarSupportedContent"
+            >
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Home -->
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="#"
+                    onclick="navega('home')"
+                    >Home</a
+                  >
+                </li>
                 <!-- Login -->
                 <li class="nav-item">
                   <a class="nav-link active" aria-current="page" href="#"
@@ -101,12 +114,14 @@
       </header>
 
       <!-- Navegação -->
-      <main class="tela show">
+      <main id="home" class="tela show">
         <div class="d-flex flex-column border border-primary m-2 border-5">
           <!-- Intro -->
           <div class="my-3 border border-secondary m-2 border-4">
             <!-- Icon -->
-            <div class="d-flex justify-content-center border border-succes m-2 border-3">
+            <div
+              class="d-flex justify-content-center border border-succes m-2 border-3"
+            >
               <img
                 class="img-fluid rounded-circle"
                 src="../IMAGENS/logo-3.png"
@@ -118,14 +133,17 @@
             <div class="d-flex flex-column border border-succes m-2 border-3">
               <h1 class="text-center">Feira Coletiva</h1>
               <p class="text-center">
-                Bem-vindo a Feira Coletiva, aqui você encontra produtos orgânicos
-                e artesanais de qualidade.
+                Bem-vindo a Feira Coletiva, aqui você encontra produtos
+                orgânicos e artesanais de qualidade.
               </p>
             </div>
           </div>
           <!-- Barra de pesquisa -->
           <div class="mb-3 px-3 border border-secondary m-2 border-4">
-            <form class="d-flex border border-succes m-2 border-3" role="search">
+            <form
+              class="d-flex border border-succes m-2 border-3"
+              role="search"
+            >
               <input
                 class="form-control me-2"
                 type="search"
@@ -138,166 +156,33 @@
             </form>
           </div>
           <!-- Cards -->
-          <div id="publicacoes" class="d-flex flex-column border border-secondary m-2 border-4" style="font-size: small;">
-            <!-- Card1 -->
-            <div class="col border border-succes m-2 border-3">
-              <div class="card border border-danger m-2 border-2">
-                <!-- Superior -->
-                <div class="d-flex flex-row justify-content-between border border-dark m-2 border-1">
-                  <div class="p-2 border border-dark m-2 border-1">
-                    <img
-                    src="../IMAGENS/manoel-gomes.jpg"
-                    alt="Perfil"
-                    style="width: 24px; border-radius: 50%;"
-                    />
-                    <span class="username" style="font-size: small;">Vendedor</span>
-                  </div>
-                  <div class="p-2 border border-dark m-2 border-1">
-                    <p >Tempo de Exposição: 5 dias</p>
-                  </div>
-                </div>
-                <!-- Meio -->
-                <div class="border border-dark m-2 border-1">
-                  <img src="../IMAGENS/2149482552.jpg" alt="" style="width: 100%; height: 150px;"/>
-                </div>
-                <!-- Inferior -->
-                <div class="d-flex flex-column mt-1 border border-dark m-2 border-1">
-                  <!-- Botões like - Participar da Compra - compartilhar -->
-                  <div class="d-flex flex-row justify-content-around px-2 border border-dark m-2 border-1">
-                    <div class="border border-dark m-2 border-1"><i>icon likes</i></div>
-                    <div class="border border-dark m-2 border-1">
-                      <button type="button" onclick="navega('publicacao')">
-                      Participar
-                    </button>
-                    </div>
-                    <div class="border border-dark m-2 border-1"><i>icon comp</i></div>
-                  </div>
-                  <div class="px-3 border border-dark m-2 border-1">
-                    <p >Descrição </br>
-                      Há 3 horas
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- Card2 -->
-            <div class="col border border-succes m-2 border-3">
-              <div class="card border border-danger m-2 border-2">
-                <!-- Superior -->
-                <div class="d-flex flex-row justify-content-between border border-dark m-2 border-1">
-                  <div class="p-2 border border-dark m-2 border-1">
-                    <img
-                    src="../IMAGENS/manoel-gomes.jpg"
-                    alt="Perfil"
-                    style="width: 24px; border-radius: 50%;"
-                    />
-                    <span class="username" style="font-size: small;">Vendedor</span>
-                  </div>
-                  <div class="p-2 border border-dark m-2 border-1">
-                    <p>Tempo de Exposição: 5 dias</p>
-                  </div>
-                </div>
-                <!-- Meio -->
-                <div class="border border-dark m-2 border-1">
-                  <img src="../IMAGENS/2149482552.jpg" alt="" style="width: 100%; height: 150px;"/>
-                </div>
-                <!-- Inferior -->
-                <div class="d-flex flex-column mt-1 border border-dark m-2 border-1">
-                  <div class="d-flex flex-row justify-content-around px-2 border border-dark m-2 border-1">
-                    <div class="border border-dark m-2 border-1"><i>icon likes</i></div>
-                    <div class="border border-dark m-2 border-1">
-                      <button type="button" onclick="navega('publicacao')">
-                        Participar
-                      </button>
-                    </div>
-                    <div class="border border-dark m-2 border-1"><i>icon comp</i></div>
-                  </div>
-                  <div class="px-3 border border-dark m-2 border-1">
-                    <p>Descrição </br>
-                      Há 3 horas
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div
+            id="publicacoes"
+            class="d-flex flex-column border border-secondary m-2 border-4"
+            style="font-size: small"
+          >
+            <!-- Criado a partir do javascript -->
           </div>
         </div>
       </main>
 
       <!-- Abrir publicação -->
       <main id="publicacao" class="tela collapse">
-        <div class="">
-          <div class="d-flex flex-column border border-primary border-5 justify-content-center">
-            <!-- Superior -->
-            <div class="border border-secondary m-2 border-4">
-              <!-- Imagem -->
-              <div class="border border-succes m-2 border-3">
-                <!-- Carousel - Fotos -->
-                <img src="../IMAGENS/2149482552.jpg" alt="" style="width: 100%; height: 250px;" >  
-              </div>
-            </div>
-            <!-- Meio -->
-            <div class="border border-secondary m-2 border-4">
-              <!-- Descrição do pedido -->
-              <div class="border border-succes m-2 border-3">
-                <h2>Lote de produtos orgânicos variados</h2>
-                <p>
-                    Uma seleção especial dos melhores produtos orgânicos fresquinhos, colhidos diretamente do produtor para você!  
-                    <br>
-                    Dentro da nossa caixa, você encontra tudo o que precisa para uma alimentação equilibrada e nutritiva: alface crocante, bananas docinhas, ovos frescos, cenouras suculentas, vagem, fubá e muito mais. Cada produto é cultivado sem o uso de agrotóxicos, garantindo um sabor único e cheio de benefícios para a sua saúde.
-                    <br> <br>
-                    🛒 Faça parte da compra coletiva e experimente o verdadeiro sabor da natureza! 🍃
-                </p>
-              </div>
-            </div>
-            <!-- Inferior -->
-            <div class="border border-secondary m-2 border-4">
-              <div class="border border-succes m-2 border-3">
-                <!-- Seleção de itens -->
-                <!-- Item 1 -->
-                <div class="d-flex flex-row border-danger m-2 border-2">
-                  <div class="border border-dark m-2 border-1">
-                    <p>Alface Crespa (un) <span style="font-weight: bold;">$7,00 | 15 disponíveis</span></p>
-                  </div>
-                  <div class="d-flex align-items-center border border-dark m-2 border-1">
-                    <div class="d-flex flex-row border border-dark m-2 border-1">
-                      <button class="" class=""> <i class=""></i></button>
-                      <span class="">1</span>
-                      <button class="" class=""> <i class=""></i> </button>
-                    </div>
-                  </div> 
-                </div>
-                <!-- Item 2 -->
-                <div class="d-flex flex-row border-danger m-2 border-2">
-                  <div class="border border-dark m-2 border-1">
-                    <p>Alface Crespa (un) <span style="font-weight: bold;">$7,00 | 15 disponíveis</span></p>
-                  </div>
-                  <div class="d-flex align-items-center border border-dark m-2 border-1">
-                    <div class="d-flex flex-row border border-dark m-2 border-1">
-                      <button class="" class=""> <i class=""></i></button>
-                      <span class="">1</span>
-                      <button class="" class=""> <i class=""></i> </button>
-                    </div>
-                  </div> 
-                </div>
-                <!-- Botão de Adicionar ao Carrinho -->
-                <div class="d-flex justify-content-end border border-danger m-2 border-2">
-                  <button class="">Adicionar R$ 48,50</button>
-                </div>
-              </div> 
-            </div>
-          </div>
+        <div id="publiSelecionada">
+          <!-- Criado a partir do javascript -->
         </div>
       </main>
-        
+
       <!-- Rodapé -->
       <footer>
-        <div class="d-flex justify-content-center p-2 mt-5 border border-primary border-5">
+        <div
+          class="d-flex justify-content-center p-2 mt-5 border border-primary border-5"
+        >
           <!-- Info-Finais -->
           <div class="border-secondary m-2 border-4">
             <p>&copy; 2024 Verdinho. Todos os direitos reservados.</p>
           </div>
-        </div> 
+        </div>
       </footer>
     </div>
 
@@ -314,48 +199,183 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script>
-      function navega(destino){
-       let telas = document.getElementsByClassName('tela')
-       Array.from(telas).forEach(element => {
-           element.classList.remove('show')
-           element.classList.add('collapse')
-       });
-       document.getElementById(destino).classList.remove('collapse')
-       document.getElementById(destino).classList.add('show')
-      }
-
-      // Criar cards com js? 
-      async function carregarDados() {
-      try {
-        // Fazendo a requisição para carregar o arquivo JSON
-        const resposta = await axios.get('teste.json'); // Caminho para o arquivo JSON
-        const dadosPublicacoes = resposta.data;
-
-        // Referência para o elemento da lista
-        const cardsPublicaoes = document.getElementById('publicacoes');
-
-        // Limpando a lista antes de adicionar os novos itens
-        cardsPublicaoes.innerHTML = '';
-
-        // Exibindo os dados na tela
-        dadosPublicacoes.forEach(promo => {
-          const li = document.createElement('li');
-          li.textContent = `${promo.nome}`;
-          cardsPublicaoes.appendChild(li);
-          li.addEventListener('click',()=>{
-           navega('perfil')
-           document.getElementById('perfil').innerHTML=`${promo.nome} - R$${promo.preco_promocional} (Desconto: ${promo.desconto_percentual}%)`;
-          });
-          
+      function navega(destino) {
+        let telas = document.getElementsByClassName('tela');
+        Array.from(telas).forEach((element) => {
+          element.classList.remove('show');
+          element.classList.add('collapse');
         });
-
-      } catch (erro) {
-        console.error('Erro ao carregar os dados:', erro);
+        document.getElementById(destino).classList.remove('collapse');
+        document.getElementById(destino).classList.add('show');
       }
-    }
 
-    // Chama a função ao carregar a página
-    window.onload = carregarDados;
+      async function carregarDados() {
+        try {
+          // Fazendo a requisição para carregar o arquivo JSON
+          const resposta = await axios.get('dados.json'); // Caminho para o arquivo JSON
+          const dadosPublicacoes = resposta.data;
+
+          // Referência para o elemento da lista
+          const cardsPublicaoes = document.getElementById('publicacoes');
+
+          // Limpando a div antes de adicionar os novos itens
+          cardsPublicaoes.innerHTML = '';
+
+          // Exibindo os cards na tela
+          dadosPublicacoes.forEach((publi) => {
+            // Todas as publicações
+            const card = document.createElement('div');
+            card.classList.add(
+              'col',
+              'border',
+              'border-succes',
+              'm-2',
+              'border-3'
+            );
+            card.innerHTML = `
+            <!-- Card1 -->
+            <div class="card border border-danger m-2 border-2">
+              <!-- Superior -->
+              <div class="d-flex flex-row justify-content-between border border-dark m-2 border-1">
+                <div class="p-2 border border-dark m-2 border-1">
+                  <img src="${publi.foto}" alt="Perfil" style="width: 24px; border-radius: 50%;" />
+                  <span class="username" style="font-size: small;">${publi.nome}</span>
+                </div>
+                <div class="p-2 border
+                border-dark m-2 border-1">
+                  <p>Tempo de Exposição: ${publi.lote.tempo}</p>
+                </div>
+              </div>
+              <!-- Meio -->
+              <div class="border border-dark m-2 border-1">
+                <img src="${publi.lote.fotoProduto}" alt="" style="width: 100%; height: 150px;" />
+              </div>
+              <!-- Inferior -->
+              <div class="d-flex flex-column mt-1 border border-dark m-2 border-1">
+                <div class="d-flex flex-row justify-content-around px-2 border border-dark m-2 border-1">
+                  <div class="border border-dark m-2 border-1"><i>icon likes</i></div>
+                  <div class="border border-dark m-2 border-1">
+                    <button type="button" onclick="carregarPubli(${publi.id})">
+                      Participar
+                    </button>
+                  </div>
+                  <div class="border border-dark m-2 border-1"><i>icon comp</i></div>
+                </div>
+                <div class="px-3 border border-dark m-2 border-1">
+                  <p>${publi.lote.descricao} </br>
+                     ${publi.lote.postadoHa}
+                  </p>
+                </div>
+              </div>
+            </div>
+          `;
+            cardsPublicaoes.appendChild(card);
+          });
+        } catch (erro) {
+          console.error('Erro ao carregar os dados:', erro);
+        }
+      }
+
+      async function carregarPubli(dados) {
+        try {
+          navega('publicacao');
+
+          const resposta = await axios.get('dados.json');
+
+          const dadosPublicacoes = resposta.data;
+
+          const publiSelecionada = document.getElementById('publiSelecionada');
+
+          publiSelecionada.innerHTML = '';
+
+          dadosPublicacoes.forEach((publi) => {
+            if (publi.id === dados) {
+              // Exibindo a publicação selecionada
+              const publiSele = document.createElement('div');
+              publiSele.classList.add(
+                'd-flex',
+                'flex-column',
+                'border',
+                'border-primary',
+                'border-5',
+                'justify-content-center'
+              );
+              publiSele.innerHTML = ` 
+              <!-- Superior -->
+              <div class="border border-secondary m-2 border-4">
+                <!-- Imagem -->
+                <div class="border border-succes m-2 border-3">
+                  <!-- Carousel - Fotos -->
+                  <img src="${
+                    publi.lote.fotoProduto
+                  }" alt="" style="width: 100%; height: 250px;" > 
+                </div>
+              </div>
+              <!-- Meio -->
+              <div class="border border-secondary m-2 border-4">
+                <!-- Descrição do pedido -->
+                <div class="border border-succes m-2 border-3">
+                  <h2>${publi.lote.titulo}</h2>
+                  <p>
+                    ${publi.lote.sobre}
+                  </p>
+                </div>
+              </div>
+              <!-- Inferior -->
+              <div class="border border-secondary m-2 border-4">
+                <div class="border border-succes m-2 border-3">
+                  <!-- Seleção de itens -->
+                  <div id="produtos" class="border border-danger m-2 border-2">
+                    <!-- Iterando sobre os produtos -->
+                    ${publi.lote.produto
+                      .map(
+                        (produto) => `
+                    <div class="d-flex flex-row border-dark m-2 border-1">
+                      <div class="border border-dark m-2 border-1">
+                        <p>${produto.nomeAlimento} (un) <span style="font-weight: bold;">R$ ${produto.preco} | ${produto.quantidade} disponíveis</span></p>
+                      </div>
+                      <div class="d-flex align-items-center border border-dark m-2 border-1">
+                        <div class="d-flex flex-row border border-dark m-2 border-1">
+                          <button><i class=""></i></button>
+                          <span>1</span>
+                          <button><i class=""></i></button>
+                        </div>
+                      </div> 
+                    </div>`
+                      )
+                      .join('')}   
+                  </div>            
+                  <!-- Botão de Adicionar ao Carrinho -->
+                  <div class="d-flex justify-content-end border border-danger m-2 border-2">
+                    <button>Adicionar R$ ${calcularTotal(
+                      publi.lote.produto
+                    )}</button>
+                  </div>
+                </div>
+              </div>
+            `;
+              publiSelecionada.appendChild(publiSele);
+              carregarProdutos(publi.id);
+            } else {
+              console.log('Publicação não encontrada');
+            }
+          });
+        } catch (erro) {
+          console.error('Erro ao carregar a publicação:', erro);
+        }
+      }
+
+      // Função para calcular o valor total com base nos produtos
+      function calcularTotal(produtos) {
+        let total = 0;
+        produtos.forEach((produto) => {
+          total += parseFloat(produto.preco) * 1; // Se estiver escolhendo 1 unidade de cada produto
+        });
+        return total.toFixed(2);
+      }
+
+      // Chama a função ao carregar a página
+      window.onload = carregarDados;
     </script>
   </body>
 </html>

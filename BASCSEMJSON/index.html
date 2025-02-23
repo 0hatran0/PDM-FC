@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feira Coletiva</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="style/flex.css"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script src="main.js"></script>
+    <!-- CSS -->
+    <!-- Colocando bordas para se localizar -->
+    <style>
+      header{
+        border: solid 5px rgb(0,0,0);
+      }
+
+      main{
+        border: solid 5px rgb(0,0,0);
+      }
+
+      footer{
+        border: solid 5px rgb(0,0,0);
+      }
+    </style>
+  </head>
+  <!-- Definindo o body -->
+  <body d-flex flex-column min-vh-100 bg-light text-dark>
+
+    <!-- Definindo div suprema -->
+    <div class="container flex-grow-1 d-flex flex-column border border-primary border-5">
+
+      <!-- Cabeçalho -->
+      <header>
+        <!-- Navbar -->
+        <div class="navbar navbar-expand-lg border border-primary m-2 border-5">
+          <div class="container-fluid border border-secondary m-2 border-4">
+            <!-- Icon -->
+            <a class="navbar-brand border border-succes m-2 border-3" href="#">
+              <img
+              class="img-fluid rounded-circle"
+              src="../IMAGENS/logo-3.png"
+              alt="Logo"
+              style="width: 60px; height: 60px"
+              />
+            </a>
+            <!-- Botao menu -->
+            <button
+              class="navbar-toggler border border-succes m-2 border-3"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Menu -->
+            <div class="collapse navbar-collapse border border-succes m-2 border-3" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <!-- Home -->
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#" onclick="navega('home')"
+                    >Home</a
+                  >
+                </li>
+                <!-- Login -->
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Login</a
+                  >
+                </li>
+                <!-- Cadastro -->
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Cadastrar</a
+                  >
+                </li>
+                <!-- Como Usar -->
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Como usar</a
+                  >
+                </li>
+                <!-- Sobre -->
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Sobre</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Navegação -->
+      <main id="home" class="tela show">
+        <div class="d-flex flex-column border border-primary m-2 border-5">
+          <!-- Intro -->
+          <div class="my-3 border border-secondary m-2 border-4">
+            <!-- Icon -->
+            <div class="d-flex justify-content-center border border-succes m-2 border-3">
+              <img
+                class="img-fluid rounded-circle"
+                src="../IMAGENS/logo-3.png"
+                alt="Logo"
+                style="width: 150px; height: 150px"
+              />
+            </div>
+            <!-- Texto -->
+            <div class="d-flex flex-column border border-succes m-2 border-3">
+              <h1 class="text-center">Feira Coletiva</h1>
+              <p class="text-center">
+                Bem-vindo a Feira Coletiva, aqui você encontra produtos orgânicos
+                e artesanais de qualidade.
+              </p>
+            </div>
+          </div>
+          <!-- Barra de pesquisa -->
+          <div class="mb-3 px-3 border border-secondary m-2 border-4">
+            <form class="d-flex border border-succes m-2 border-3" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Pesquisar"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-success" type="submit">
+                <i>icon</i>
+              </button>
+            </form>
+          </div>
+          <!-- Cards -->
+          <div id="publicacoes" class="d-flex flex-column border border-secondary m-2 border-4" style="font-size: small;">
+            <!-- Card1 -->
+            <div class="col border border-succes m-2 border-3">
+              <div class="card border border-danger m-2 border-2">
+                <!-- Superior -->
+                <div class="d-flex flex-row justify-content-between border border-dark m-2 border-1">
+                  <div class="p-2 border border-dark m-2 border-1">
+                    <img
+                    src="../IMAGENS/manoel-gomes.jpg"
+                    alt="Perfil"
+                    style="width: 24px; border-radius: 50%;"
+                    />
+                    <span class="username" style="font-size: small;">Vendedor</span>
+                  </div>
+                  <div class="p-2 border border-dark m-2 border-1">
+                    <p >Tempo de Exposição: 5 dias</p>
+                  </div>
+                </div>
+                <!-- Meio -->
+                <div class="border border-dark m-2 border-1">
+                  <img src="../IMAGENS/2149482552.jpg" alt="" style="width: 100%; height: 150px;"/>
+                </div>
+                <!-- Inferior -->
+                <div class="d-flex flex-column mt-1 border border-dark m-2 border-1">
+                  <!-- Botões like - Participar da Compra - compartilhar -->
+                  <div class="d-flex flex-row justify-content-around px-2 border border-dark m-2 border-1">
+                    <div class="border border-dark m-2 border-1"><i>icon likes</i></div>
+                    <div class="border border-dark m-2 border-1">
+                      <button type="button" onclick="navega('publicacao')">
+                      Participar
+                    </button>
+                    </div>
+                    <div class="border border-dark m-2 border-1"><i>icon comp</i></div>
+                  </div>
+                  <div class="px-3 border border-dark m-2 border-1">
+                    <p >Descrição </br>
+                      Há 3 horas
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Card2 -->
+            <div class="col border border-succes m-2 border-3">
+              <div class="card border border-danger m-2 border-2">
+                <!-- Superior -->
+                <div class="d-flex flex-row justify-content-between border border-dark m-2 border-1">
+                  <div class="p-2 border border-dark m-2 border-1">
+                    <img
+                    src="../IMAGENS/manoel-gomes.jpg"
+                    alt="Perfil"
+                    style="width: 24px; border-radius: 50%;"
+                    />
+                    <span class="username" style="font-size: small;">Vendedor</span>
+                  </div>
+                  <div class="p-2 border border-dark m-2 border-1">
+                    <p>Tempo de Exposição: 5 dias</p>
+                  </div>
+                </div>
+                <!-- Meio -->
+                <div class="border border-dark m-2 border-1">
+                  <img src="../IMAGENS/2149482552.jpg" alt="" style="width: 100%; height: 150px;"/>
+                </div>
+                <!-- Inferior -->
+                <div class="d-flex flex-column mt-1 border border-dark m-2 border-1">
+                  <div class="d-flex flex-row justify-content-around px-2 border border-dark m-2 border-1">
+                    <div class="border border-dark m-2 border-1"><i>icon likes</i></div>
+                    <div class="border border-dark m-2 border-1">
+                      <button type="button" onclick="navega('publicacao')">
+                        Participar
+                      </button>
+                    </div>
+                    <div class="border border-dark m-2 border-1"><i>icon comp</i></div>
+                  </div>
+                  <div class="px-3 border border-dark m-2 border-1">
+                    <p>Descrição </br>
+                      Há 3 horas
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Abrir publicação -->
+      <main id="publicacao" class="tela collapse">
+        <div id="publiSelecionada">
+          <div class="d-flex flex-column border border-primary border-5 justify-content-center">
+            <!-- Superior -->
+            <div class="border border-secondary m-2 border-4">
+              <!-- Imagem -->
+              <div class="border border-succes m-2 border-3">
+                <!-- Carousel - Fotos -->
+                <img src="../IMAGENS/2149482552.jpg" alt="" style="width: 100%; height: 250px;" >  
+              </div>
+            </div>
+            <!-- Meio -->
+            <div class="border border-secondary m-2 border-4">
+              <!-- Descrição do pedido -->
+              <div class="border border-succes m-2 border-3">
+                <h2>Lote de produtos orgânicos variados</h2>
+                <p>
+                    Uma seleção especial dos melhores produtos orgânicos fresquinhos, colhidos diretamente do produtor para você!  
+                    <br>
+                    Dentro da nossa caixa, você encontra tudo o que precisa para uma alimentação equilibrada e nutritiva: alface crocante, bananas docinhas, ovos frescos, cenouras suculentas, vagem, fubá e muito mais. Cada produto é cultivado sem o uso de agrotóxicos, garantindo um sabor único e cheio de benefícios para a sua saúde.
+                    <br> <br>
+                    🛒 Faça parte da compra coletiva e experimente o verdadeiro sabor da natureza! 🍃
+                </p>
+              </div>
+            </div>
+            <!-- Inferior -->
+            <div class="border border-secondary m-2 border-4">
+              <div class="border border-succes m-2 border-3">
+                <!-- Seleção de itens -->
+                <div id="produtos" class="border border-danger m-2 border-2">
+                  <!-- Item 1 -->
+                  <div class="d-flex flex-row border-dark m-2 border-1">
+                    <div class="border border-dark m-2 border-1">
+                      <p>Alface Crespa (un) <span style="font-weight: bold;">$7,00 | 15 disponíveis</span></p>
+                    </div>
+                    <div class="d-flex align-items-center border border-dark m-2 border-1">
+                      <div class="d-flex flex-row border border-dark m-2 border-1">
+                        <button class="" class=""> <i class=""></i></button>
+                        <span class="">1</span>
+                        <button class="" class=""> <i class=""></i> </button>
+                      </div>
+                    </div> 
+                  </div>
+                  <!-- Item 2 -->
+                  <div class="d-flex flex-row border-dark m-2 border-1">
+                    <div class="border border-dark m-2 border-1">
+                      <p>Alface Crespa (un) <span style="font-weight: bold;">$7,00 | 15 disponíveis</span></p>
+                    </div>
+                    <div class="d-flex align-items-center border border-dark m-2 border-1">
+                      <div class="d-flex flex-row border border-dark m-2 border-1">
+                        <button class="" class=""> <i class=""></i></button>
+                        <span class="">1</span>
+                        <button class="" class=""> <i class=""></i> </button>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+                <!-- Botão de Adicionar ao Carrinho -->
+                <div class="d-flex justify-content-end border border-danger m-2 border-2">
+                  <button class="">Adicionar R$ 48,50</button>
+                </div>
+              </div> 
+            </div>
+          </div>
+        </div>
+      </main>
+        
+      <!-- Rodapé -->
+      <footer>
+        <div class="d-flex justify-content-center p-2 mt-5 border border-primary border-5">
+          <!-- Info-Finais -->
+          <div class="border-secondary m-2 border-4">
+            <p>&copy; 2024 Verdinho. Todos os direitos reservados.</p>
+          </div>
+        </div> 
+      </footer>
+    </div>
+
+    <!-- Bootstrap script -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+      function navega(destino){
+       let telas = document.getElementsByClassName('tela')
+       Array.from(telas).forEach(element => {
+           element.classList.remove('show')
+           element.classList.add('collapse')
+       });
+       document.getElementById(destino).classList.remove('collapse')
+       document.getElementById(destino).classList.add('show')
+      }
+    </script>
+
+  </body>
+</html>
