@@ -28,15 +28,15 @@
   <body d-flex flex-column min-vh-100 bg-light text-dark>
     <!-- Definindo div suprema -->
     <div
-      class="container flex-grow-1 d-flex flex-column border border-primary border-5"
+      class="container flex-grow-1 d-flex flex-column"
     >
       <!-- Cabeçalho -->
       <header>
         <!-- Navbar -->
-        <div class="navbar navbar-expand-lg border border-primary m-2 border-5">
-          <div class="container-fluid border border-secondary m-2 border-4">
+        <div class="navbar navbar-expand-lg">
+          <div class="container-fluid">
             <!-- Icon -->
-            <a class="navbar-brand border border-succes m-2 border-3" href="#">
+            <a class="navbar-brand" href="#">
               <img
                 class="img-fluid rounded-circle"
                 src="../IMAGENS/logo-3.png"
@@ -46,7 +46,7 @@
             </a>
             <!-- Botao menu -->
             <button
-              class="navbar-toggler border border-succes m-2 border-3"
+              class="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#navbarSupportedContent"
@@ -58,7 +58,7 @@
             </button>
             <!-- Menu -->
             <div
-              class="collapse navbar-collapse border border-succes m-2 border-3"
+              class="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -104,12 +104,12 @@
 
       <!-- Navegação -->
       <main id="home" class="tela show">
-        <div class="d-flex flex-column border border-primary m-2 border-5">
+        <div class="d-flex flex-column">
           <!-- Intro -->
-          <div class="my-3 border border-secondary m-2 border-4">
+          <div class="my-3">
             <!-- Icon -->
             <div
-              class="d-flex justify-content-center border border-succes m-2 border-3"
+              class="d-flex justify-content-center"
             >
               <img
                 class="img-fluid rounded-circle"
@@ -119,7 +119,7 @@
               />
             </div>
             <!-- Texto -->
-            <div class="d-flex flex-column border border-succes m-2 border-3">
+            <div class="d-flex flex-column">
               <h1 class="text-center">Feira Coletiva</h1>
               <p class="text-center">
                 Bem-vindo a Feira Coletiva, aqui você encontra produtos
@@ -128,9 +128,9 @@
             </div>
           </div>
           <!-- Barra de pesquisa -->
-          <div class="mb-3 px-3 border border-secondary m-2 border-4">
+          <div class="mb-3 px-3">
             <form
-              class="d-flex border border-succes m-2 border-3"
+              class="d-flex"
               role="search"
             >
               <input
@@ -146,10 +146,11 @@
           </div>
           <!-- Cards -->
           <div
-            id="publicacoes"
-            class="d-flex flex-column border border-secondary m-2 border-4"
+            
+            class="d-flex flex-column"
             style="font-size: small"
           >
+            <div id="publicacoes" class="row row-cols-1 row-cols-md-2 g-4"></div>
             <!-- Criado a partir do javascript -->
           </div>
         </div>
@@ -157,7 +158,7 @@
 
       <!-- Abrir publicação -->
       <main id="publicacao" class="tela collapse">
-        <div id="publiSelecionada">
+        <div id="publiSelecionada" class="px-lg-5">
           <!-- Criado a partir do javascript -->
         </div>
       </main>
@@ -165,10 +166,10 @@
       <!-- Rodapé -->
       <footer>
         <div
-          class="d-flex justify-content-center p-2 mt-5 border border-primary border-5"
+          class="d-flex justify-content-center align-items-end p-2 mt-4"
         >
           <!-- Info-Finais -->
-          <div class="border-secondary m-2 border-4">
+          <div class="">
             <p>&copy; 2024 Verdinho. Todos os direitos reservados.</p>
           </div>
         </div>

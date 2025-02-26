@@ -52,5 +52,31 @@
         }
       ]
     }
+
+  },
+  {
+    "id": 3,
+    "nome": "Bruna",
+    "foto": "../IMAGENS/manoel-gomes.jpg",
+    "contato": "(48) 91111-1111",
+    "lote": {
+      "id": 1,
+      "tempo": "7 dias",
+      "fotoProduto": "../IMAGENS/2149442335.jpg",
+      "descricao": "Dia do Mel",
+      "postadoHa": "1 dia",
+      "titulo": "Melhor safra de mel",
+      "sobre": "Esta é a melhor safra de mel que já produzimos. O mel é puro, sem adição de açúcares ou conservantes. Além disso, é produzido de forma sustentável, sem prejudicar as abelhas. O mel é um alimento rico em nutrientes e benefícios para a saúde, além de ser um ótimo adoçante natural.",
+      "qtdProdutos": "1",
+      "produto": [
+        {
+          "id": 1,
+          "nomeAlimento": "Mel",
+          "preco": "15,00",
+          "quantidade": "10"
+        }
+      ]
+    }
+
   }
 ]

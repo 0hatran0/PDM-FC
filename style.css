@@ -1,4 +1,4 @@
-header {
+/* header {
     border: solid 5px rgb(0, 0, 0);
   }
 
@@ -8,4 +8,8 @@ header {
 
   footer {
     border: solid 5px rgb(0, 0, 0);
-  }
+  } */
+
+#publicacoes{
+  overflow: hidden;
+}
