@@ -1,39 +1,33 @@
 // Metodo para navegação das paginas
 function navega(destino) {
-    let telas = document.getElementsByClassName('tela');
-    Array.from(telas).forEach((element) => {
-      element.classList.remove('show');
-      element.classList.add('collapse');
-    });
-    document.getElementById(destino).classList.remove('collapse');
-    document.getElementById(destino).classList.add('show');
+  let telas = document.getElementsByClassName('tela');
+  Array.from(telas).forEach((element) => {
+    element.classList.remove('show');
+    element.classList.add('collapse');
+  });
+  document.getElementById(destino).classList.remove('collapse');
+  document.getElementById(destino).classList.add('show');
 }
 
 // Carregando todas as publis
 async function carregarDados() {
-    try {
-      // Fazendo a requisição para carregar o arquivo JSON
-      const resposta = await axios.get('dados.json'); // Caminho para o arquivo JSON
-      const dadosPublicacoes = resposta.data;
+  try {
+    // Fazendo a requisição para carregar o arquivo JSON
+    const resposta = await axios.get('dados.json'); // Caminho para o arquivo JSON
+    const dadosPublicacoes = resposta.data;
 
-      // Referência para o elemento da lista
-      const cardsPublicaoes = document.getElementById('publicacoes');
+    // Referência para o elemento da lista
+    const cardsPublicaoes = document.getElementById('publicacoes');
 
-      // Limpando a div antes de adicionar os novos itens
-      cardsPublicaoes.innerHTML = '';
+    // Limpando a div antes de adicionar os novos itens
+    cardsPublicaoes.innerHTML = '';
 
-      // Exibindo os cards na tela
-      dadosPublicacoes.forEach((publi) => {
-        // Todas as publicações
-        const card = document.createElement('div');
-        card.classList.add(
-          'col',
-          'border',
-          'border-succes',
-          'm-2',
-          'border-3'
-        );
-        card.innerHTML = `
+    // Exibindo os cards na tela
+    dadosPublicacoes.forEach((publi) => {
+      // Todas as publicações
+      const card = document.createElement('div');
+      card.classList.add('col', 'border', 'border-succes', 'm-2', 'border-3');
+      card.innerHTML = `
         <!-- Card1 -->
         <div class="card border border-danger m-2 border-2">
           <!-- Superior -->
@@ -70,39 +64,39 @@ async function carregarDados() {
           </div>
         </div>
       `;
-        cardsPublicaoes.appendChild(card);
-      });
-    } catch (erro) {
-      console.error('Erro ao carregar os dados:', erro);
-    }
+      cardsPublicaoes.appendChild(card);
+    });
+  } catch (erro) {
+    console.error('Erro ao carregar os dados:', erro);
+  }
 }
 
 // Carregando a publi
 async function carregarPubli(dados) {
-    try {
-      navega('publicacao');
+  try {
+    navega('publicacao');
 
-      const resposta = await axios.get('dados.json');
+    const resposta = await axios.get('dados.json');
 
-      const dadosPublicacoes = resposta.data;
+    const dadosPublicacoes = resposta.data;
 
-      const publiSelecionada = document.getElementById('publiSelecionada');
+    const publiSelecionada = document.getElementById('publiSelecionada');
 
-      publiSelecionada.innerHTML = '';
+    publiSelecionada.innerHTML = '';
 
-      dadosPublicacoes.forEach((publi) => {
-        if (publi.id === dados) {
-          // Exibindo a publicação selecionada
-          const publiSele = document.createElement('div');
-          publiSele.classList.add(
-            'd-flex',
-            'flex-column',
-            'border',
-            'border-primary',
-            'border-5',
-            'justify-content-center'
-          );
-          publiSele.innerHTML = ` 
+    dadosPublicacoes.forEach((publi) => {
+      if (publi.id === dados) {
+        // Exibindo a publicação selecionada
+        const publiSele = document.createElement('div');
+        publiSele.classList.add(
+          'd-flex',
+          'flex-column',
+          'border',
+          'border-primary',
+          'border-5',
+          'justify-content-center'
+        );
+        publiSele.innerHTML = ` 
           <!-- Superior -->
           <div class="border border-secondary m-2 border-4">
             <!-- Imagem -->
@@ -156,31 +150,44 @@ async function carregarPubli(dados) {
             </div>
           </div>
         `;
-          publiSelecionada.appendChild(publiSele);
-          carregarProdutos(publi.id);
-        } else {
-          console.log('Publicação não encontrada');
-        }
-      });
-    } catch (erro) {
-      console.error('Erro ao carregar a publicação:', erro);
-    }
+        publiSelecionada.appendChild(publiSele);
+        carregarProdutos(publi.id);
+      } else {
+        console.log('Publicação não encontrada');
+      }
+    });
+  } catch (erro) {
+    console.error('Erro ao carregar a publicação:', erro);
+  }
 }
 
 // Função para calcular o valor total com base nos produtos
 function calcularTotal(produtos) {
-    let total = 0;
-    produtos.forEach((produto) => {
-      total += parseFloat(produto.preco) * 1; // Se estiver escolhendo 1 unidade de cada produto
-    });
-    return total.toFixed(2);
+  let total = 0;
+  produtos.forEach((produto) => {
+    total += parseFloat(produto.preco) * 1; // Se estiver escolhendo 1 unidade de cada produto
+  });
+  return total.toFixed(2);
 }
 
 // Chama a função ao carregar a página
 window.onload = carregarDados;
 
-if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/service-worker.js")
-    .then(() => console.log("Service Worker registrado com sucesso!"))
-    .catch((err) => console.log("Erro ao registrar o Service Worker", err));
+//Registra o serviceWorker da aplicação para cache de recursos offline
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./service-worker.js');
+}
+
+//Verifica se o app pode ser instalado e mostra o botão
+var pedidoInstalacao;
+// window.addEventListener('beforeinstallprompt', function (installPrompt) {
+//   if (installPrompt) {
+//     $('#installAppBt').show();
+//     pedidoInstalacao = installPrompt;
+//   }
+// });
+
+//Inicia a instalação do app
+function installApp() {
+  pedidoInstalacao.prompt();
 }
